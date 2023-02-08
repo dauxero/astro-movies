@@ -1,0 +1,29 @@
+---
+const respuesta = await fetch(
+  "https://api.themoviedb.org/3/movie/popular?api_key=8ef82efa8519ab65f4c0856c6563d912&language=en-US&page=1"
+);
+const datos = await respuesta.json();
+const detail = "/detail/";
+const poster_url = "https://image.tmdb.org/t/p/w500/";
+---
+
+<div class="row">
+  {
+    datos.results.map((item) => (
+      <div class="col-lg-3">
+        <div class="card mt-4" style="width: 18rem;">
+          <a href={detail + item.id}>
+            <img
+              src={poster_url + item.poster_path}
+              alt="poster"
+              class="card-img-top"
+            />
+          </a>
+          <div class="card-body">
+            <h5 class="card-title">{item.title}</h5>
+          </div>
+        </div>
+      </div>
+    ))
+  }
+</div>

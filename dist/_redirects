@@ -1,0 +1,3 @@
+/                   /.netlify/functions/entry    200
+/results/:search    /.netlify/functions/entry    200
+/detail/:id         /.netlify/functions/entry    200

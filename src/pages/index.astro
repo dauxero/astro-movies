@@ -1,0 +1,13 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Movies from "@components/Movies.astro";
+import Search from "@components/Search.jsx";
+
+//client:load es para activar el componente siempre desde que cargue la pagina o se de por medio de un evento.
+//client:visible es para que cuando llega a una preterminada parte de la pagina y se vea el componente se activara
+---
+
+<Layout>
+  <Search client:load />
+  <Movies />
+</Layout>
